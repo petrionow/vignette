@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #E31E24;
+  --primary-background: #FFF5F5;
+}
+
+body {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(237,41,57,0.22314863445378152) 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Date input styling */
+input[type="date"] {
+  color: transparent;
+  position: relative;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+input[type="date"]::placeholder {
+  color: #6B7280;
+}
